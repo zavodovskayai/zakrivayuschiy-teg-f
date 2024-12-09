@@ -2,7 +2,7 @@
 .page {
   padding-block-start:  calc(var(--gaps) * 10);
   font-family: var(--font_family, "inter", sans-serif);
-  font-variation-settings: "wght" var(--normal, 400);
+  font-weight: var(--normal, 400);
   min-inline-size:  calc(var(--gaps) * 32);
   min-block-size: 100dvb;
   color: var(--text, #000000);
@@ -68,7 +68,7 @@
 }
 
 .card_title {
-  font-variation-settings: "wght" var(--bold, 700);
+  font-weight: var(--bold, 700);
   font-size:  calc(var(--gaps) + 8px);
   line-height:  calc(var(--gaps) * 2.178);
 }
@@ -81,8 +81,8 @@
 .wrapper_text {
   position: absolute;
   z-index: 1;
-  top: 27px;
-  right: 23px;
+  top: calc(var(--gaps) * 2.7);
+  right: calc(var(--gaps) * 2.3);
   font-family: var(--font_family_accent, "PressStart2P", fantasy);
   font-size: 14px;
   line-height: normal;
@@ -93,7 +93,7 @@
 
 .card_image {
   display: block;
-  inline-size: 100%;
+  inline-size: 100%; 
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1 / 1;
@@ -285,6 +285,7 @@
     padding: calc(var(--gaps) * 3) calc(var(--gaps) * 4);
     max-inline-size: calc(var(--gaps) * 34);
   }
+
 }
 
 @supports (-webkit-text-stroke: 1px var(--background_color, #ffffff)) or
