@@ -93,7 +93,7 @@
 
 .card_image {
   display: block;
-  inline-size: 100%; 
+  inline-size: 100%;
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1 / 1;
@@ -285,7 +285,6 @@
     padding: calc(var(--gaps) * 3) calc(var(--gaps) * 4);
     max-inline-size: calc(var(--gaps) * 34);
   }
-
 }
 
 @supports (-webkit-text-stroke: 1px var(--background_color, #ffffff)) or
