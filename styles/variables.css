@@ -1,1 +1,40 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+/*Вариантивные стили*/
+:root {
+  /*Названия переменных лучше не привязывать к элементам или цветам*/
+  --decor: #000000;
+  --common: #ffffff;
+
+  /*Цвет текста*/
+  --text: var(--decor, #000000);
+  /*Цвет текста кнопки*/
+  --button: var(--background_color, #ffffff);
+
+  /*Цвет фона*/
+  --background_color: var(--common, #ffffff);
+  /*Фоновое изображение*/
+  --background_image: repeating-linear-gradient(
+    to left,
+    #d3d3d3 0 2px,
+    #d3d3d300 2px 4px
+  ),
+  repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+  linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+  /*Работа со шрифтами*/
+  --font_family: "inter", sans-serif;
+  --normal: normal; /*400*/
+  --bold: bold; /*700*/
+  --font_family_accent: "PressStart2P", fantasy;
+
+  /*Цвета лайка*/
+  --counter: var(--text, #000000);
+  --sparks_fill: #ff0000;
+  --like_fill: none;
+
+  /*переменные для отступов в любом виде, шрифтов и т.д.*/
+  --gaps: 10px;
+  --fs_header: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  --margin_block: clamp(7.5rem, 7.324rem + 0.751vw, 8rem);
+  --fs_header_text: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+
+}
