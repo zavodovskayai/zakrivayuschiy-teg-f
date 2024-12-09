@@ -2,7 +2,8 @@
 .page {
   padding-block-start:  calc(var(--gaps) * 10);
   font-family: var(--font_family, "inter", sans-serif);
-  font-weight: var(--normal, 400);
+  /*font-weight: var(--normal, 400);*/
+  font-variation-settings: "wght" var(--normal, 400);
   min-inline-size:  calc(var(--gaps) * 32);
   min-block-size: 100dvb;
   color: var(--text, #000000);
@@ -68,7 +69,8 @@
 }
 
 .card_title {
-  font-weight: var(--bold, 700);
+  /*font-weight: var(--bold, 700);*/
+  font-variation-settings: "wght" var(--bold, 700);
   font-size:  calc(var(--gaps) + 8px);
   line-height:  calc(var(--gaps) * 2.178);
 }
