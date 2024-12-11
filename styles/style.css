@@ -1,14 +1,13 @@
 /* Основные стили страницы*/
 .page {
   padding-block-start:  calc(var(--gaps) * 10);
-  font-family: var(--font_family, "inter", sans-serif);
-  /*font-weight: var(--normal, 400);*/
+  font-family: var(--font-family);
   font-variation-settings: "wght" var(--normal, 400);
   min-inline-size:  calc(var(--gaps) * 32);
   min-block-size: 100dvb;
   color: var(--text, #000000);
-  background-color: var(--background_color, #ffffff);
-  background-image: var(--background_image, none);
+  background-color: var(--background-color, #ffffff);
+  background-image: var(--background-image, none);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -18,7 +17,7 @@
   display: grid;
   justify-content: center;
   justify-items: center;
-  font-family: var(--font_family_accent, "PressStart2P", fantasy);
+  font-family: var(--font-family-accent);
   line-height: normal;
   text-transform: uppercase;
   gap: calc(var(--gaps) * 2);
@@ -32,19 +31,19 @@
   display: grid;
   gap:  calc(var(--gaps) * 2);
   text-align: center;
-  font-size: var(--fs_header);
-  margin-block-start: var(--margin_block);
+  font-size: var(--fs-header);
+  margin-block-start: var(--margin-block);
 }
 
 .header_text {
-  font-size: var(--fs_header_text);
-  margin-block-end: var(--margin_block);
+  font-size: var(--fs-header-text);
+  margin-block-end: var(--margin-block);
 }
 
 /*Общие стили карточек*/
 .card {
   margin-inline: auto;
-  background-color: var(--background_color, #ffffff);
+  background-color: var(--background-color, #ffffff);
   border: 2px solid var(--text, #000000);
   max-inline-size: calc(var(--gaps) * 69 + 6px);
 }
@@ -69,7 +68,6 @@
 }
 
 .card_title {
-  /*font-weight: var(--bold, 700);*/
   font-variation-settings: "wght" var(--bold, 700);
   font-size:  calc(var(--gaps) + 8px);
   line-height:  calc(var(--gaps) * 2.178);
@@ -85,17 +83,17 @@
   z-index: 1;
   top: calc(var(--gaps) * 2.7);
   right: calc(var(--gaps) * 2.3);
-  font-family: var(--font_family_accent, "PressStart2P", fantasy);
+  font-family: var(--font-family-accent);
   font-size: 14px;
   line-height: normal;
   opacity: 0.5;
-  text-shadow: 0 0 1px var(--background_color, #ffffff);
+  text-shadow: 0 0 1px var(--background-color, #ffffff);
   mix-blend-mode: hard-light;
 }
 
 .card_image {
   display: block;
-  inline-size: 100%;
+  inline-size: 100%; 
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1 / 1;
@@ -138,18 +136,21 @@
 
 .button {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   z-index: 1;
   border: 2px solid var(--text, #000000);
-  background-color: var(--background_color, #ffffff);
+  background-color: var(--background-color, #ffffff);
   padding:  var(--gaps)  calc(var(--gaps) * 3 + 4px);
   cursor: pointer;
   font-size:  calc(var(--gaps) + 4px);
-  font-family: var(--font_family_accent, "PressStart2P", fantasy);
+  font-family: var(--font-family-accent);
   text-transform: inherit;
   text-align: center;
   transition: box-shadow 0.3s ease-in-out;
 }
-
 .button:focus {
   outline: none;
 }
@@ -200,9 +201,15 @@
   mix-blend-mode: difference;
 }
 
+/*Фиксируем размер кнопки*/
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+}
+
 .modal {
   border: 2px solid var(--text, #000000);
-  font-family: var(--font_family_accent, "PressStart2P", fantasy);
+  font-family: var(--font-family-accent);
   font-size: calc(var(--gaps) + 4px);
   line-height: calc(var(--gaps) * 2.1);
   padding: calc(var(--gaps) * 2.5) calc(var(--gaps) * 3);
@@ -275,12 +282,9 @@
   }
 
   .save {
+    display: flex;
     flex-direction: column;
-  }
-
-  .button__icon {
-    width: calc(var(--gaps) * 3 - 2px);
-    height: calc(var(--gaps) * 3 - 2px);
+    padding: calc(var(--gaps) * 1.5) calc(var(--gaps) * 2);
   }
 
   .modal {
@@ -288,13 +292,18 @@
     max-inline-size: calc(var(--gaps) * 34);
   }
 
+  .floppy {
+    inline-size: calc(var(--gaps) * 3 - 2px);
+    block-size: calc(var(--gaps) * 3 - 2px);
+  }
+
 }
 
-@supports (-webkit-text-stroke: 1px var(--background_color, #ffffff)) or
-  (text-stroke: 1px var(--background_color, #ffffff)) {
+@supports (-webkit-text-stroke: 1px var(--background-color, #ffffff)) or
+  (text-stroke: 1px var(--background-color, #ffffff)) {
   .wrapper_text {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--background_color, #ffffff);
-    text-stroke: 1px var(--background_color, #ffffff);
+    -webkit-text-stroke: 1px var(--background-color, #ffffff);
+    text-stroke: 1px var(--background-color, #ffffff);
   }
 }
