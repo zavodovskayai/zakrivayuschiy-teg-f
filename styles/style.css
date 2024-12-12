@@ -45,7 +45,7 @@
   margin-inline: auto;
   background-color: var(--background-color, #ffffff);
   border: 2px solid var(--text, #000000);
-  max-inline-size: calc(var(--gaps) * 69 + 6px);
+  max-inline-size: calc(var(--gaps) * 70);
 }
 
 /*Стили содержания*/
@@ -102,7 +102,7 @@
 .card_content {
   display: grid;
   gap: calc(var(--gaps) * 2.7);
-  padding: calc(var(--gaps) * 3)  calc(var(--gaps) * 2.5) 0  calc(var(--gaps) * 2.5);
+  padding: calc(var(--gaps) * 2.6)  calc(var(--gaps) * 2.5) 0  calc(var(--gaps) * 2.5);
   border-block-start: 2px solid var(--text, #000000);
   font-size: calc(var(--gaps) + 8px);
   line-height: calc(var(--gaps) * 2.1);
@@ -263,7 +263,7 @@
 }
 
 .filter_old_films {
-    filter: sepia(90%) contrast(95%);
+  filter: sepia(90%) contrast(95%);
 }
 
 .filter_blur {
@@ -276,15 +276,22 @@
 
 @media (width <= 375px) {
 
-  .wrapper_text {
-    top: calc(var(--gaps) * 2.2);
-    right: calc(var(--gaps) + 1px);
+  .card_content {
+    padding: calc(var(--gaps) * 2.5)  calc(var(--gaps) * 2.5) 0 calc(var(--gaps) * 2.5);
+  }
+
+  .card {
+    margin-inline: auto;
+    background-color: var(--background-color, #ffffff);
+    border: 2px solid var(--text, #000000);
+    max-inline-size: calc(var(--gaps) * 69 + 6px);
   }
 
   .save {
     display: flex;
     flex-direction: column;
     padding: calc(var(--gaps) * 1.5) calc(var(--gaps) * 2);
+    margin-top:  calc(var(--gaps) - 17px);
   }
 
   .modal {
